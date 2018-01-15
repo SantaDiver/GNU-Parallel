@@ -2,7 +2,7 @@
 
 count=200
 procs=4
-precesion=7
+precision=7
 
 c_on_p=$(echo "$count/$procs" | bc)
 
@@ -20,7 +20,7 @@ if [ -z $1 ]
 		res=$(parallel -a .args -S $1 ~/mc.sh)
 fi
 
-final=$(echo "scale=$precesion; (" $(echo $res | tr ' ' '+') ") / $procs" | bc)
+final=$(echo "scale=$precision; (" $(echo $res | tr ' ' '+') ") / $procs" | bc)
 
 rm .args
 
