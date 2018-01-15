@@ -1,6 +1,6 @@
 #!/bin/bash
 
-count=200
+count=1000
 procs=4
 precision=7
 

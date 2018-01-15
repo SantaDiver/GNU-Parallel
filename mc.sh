@@ -2,8 +2,7 @@
 # pi = 4*atan(1)
 
 function f {
-    x=$(echo "$1*10" | bc -l)
-    echo "$x^3" | bc -l
+    echo "scale=10; 4 * $1^3" | bc -l
 }
 
 function rand {
